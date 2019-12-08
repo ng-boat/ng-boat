@@ -4,8 +4,8 @@ module.exports = {
     build: './static/build/',
     css: {
       src: [
-        './static/source/css/*.styl',
-        '!./static/source/css/common.styl'
+        './static/source/css/*.less',
+        '!./static/source/css/common.less'
       ],
       dest: {
         production: './static/build/css/',

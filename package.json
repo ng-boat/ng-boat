@@ -10,7 +10,9 @@
     "url": "https://github.com/DjangoGirls/djangogirls/issues"
   },
   "homepage": "https://github.com/DjangoGirls/djangogirls#readme",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-less": "^4.0.1"
+  },
   "devDependencies": {
     "bootstrap": "^3.3.6",
     "gulp": "^3.9.1",
@@ -22,7 +24,7 @@
     "gulp-rev-napkin": "^0.1.0",
     "gulp-stylus": "^2.3.1",
     "gulp-uglify": "^1.5.3",
-    "gulp-util": "^3.0.7",
+    "gulp-util": "^3.0.8",
     "gulp-watch": "^4.3.5",
     "require-dir": "^0.3.0",
     "stylus": "^0.54.2"
