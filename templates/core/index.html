@@ -8,81 +8,37 @@
 {% block content %}
 
     <section id="box-with-picture">
-      <div class="black-canvas">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-5 col-md-offset-7 subheader">
                     <h1>
-                        We inspire women to fall in love with programming.
+                        Marzysz o karierze w IT?
                     </h1>
                     <p>
-                        Django Girls organize free Python and Django workshops, create open sourced online tutorials and curate amazing first experiences with technology.
+                        Chciałbyś zobaczyć jak wygląda praca programisty? Nie wiesz od czego zacząć naukę? Organizujemy darmowe warsztaty z programowania od podstaw <strong>dla wszystkich</strong>.
                     </p>
                 </div>
             </div>
         </div>
-      </div>
     </section>
 
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                  miejsce na duże logo
+                </div>
+                <div class="col-sm-9">
+                    <h2>Czym jest ng-boat?</h2>
+                    <p>
+                        Organizujemy warsztaty z programowania, na których zbudujecie swoją pierwszą aplikację internetową w Angularze. Kilka zdań o projekcie więcej.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="container">
-        <section id="about">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>What is Django Girls?</h2>
-                    <p>
-                        Django Girls is a <a href="{% url 'core:foundation' %}">non-profit organization</a> and a community that empowers and helps women to organize free, one-day programming workshops by providing tools, resources and support. We are a volunteer run organization with hundreds of people contributing to bring more amazing women into the world of technology. We are making technology more approachable by creating resources designed with empathy.
-                    </p>
-                    <p>
-                        During each of our events, 30-60 women build their first web application using HTML, CSS, Python and Django.
-                    </p>
-                    {# <p><a href="">Learn more about Django Girls »</a></p> #}
-                </div>
-                <div class="col-md-6">
-                  <iframe src="//player.vimeo.com/video/112325567?title=0&amp;byline=0&amp;portrait=0&amp;color=ff9933" width="585" height="329" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                </div>
-            </div>
-            
-             <!-- Crowdfunding Campaign -->
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>We reached our goal! </h2>
-                    <p>Thanks to our awesome supporters!</p>
-                    <p>This year (2018) we ran a crowdfunding campaign on Indiegogo's generosity website from the
-                        29th January to the 29th of March with the aim of raising US $10,000. We are truly grateful to all
-                        our awesome <a href="{% url 'core:crowdfunding-donors' %}">supporters </a>who helped reach
-                        our target goal. We managed to raise a total of $13,314 - 133% of our goal!
-                    </p>
-                    <p>
-                        See them all <a href="{% url 'core:crowdfunding-donors' %}">here</a>.
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <a href="{% url 'core:crowdfunding-donors' %}"><h2>Meet our Awesome Supporters!</h2>
-                    <img src="{% static 'img/global/donate/ghana.png' %}"></a>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>Django Girls impact</h2>
-                    <p>
-                        Since 2014, an army of <span class="highlighted-number">{{ organizers_count|default_if_none:'0' }} volunteers</span> in the Django Girls community organized <span class="highlighted-number">{{ all_events_count|default_if_none:'0' }} events.</span> We've been to <span class="highlighted-number">{{ cities_count|default_if_none:'0' }} cities</span> in <span class="highlighted-number">{{ country_count|default_if_none:'0' }} countries</span> (<a href="{% url 'core:events_map' %}">see them all on a map</a>).
-                    </p>
-                    <p>
-                        A total of <span class="highlighted-number">{{ attendees_sum|default_if_none:'0' }} incredible women attended</span> events organized by members of our community.
-                    </p>
-                    <p><a href="{% url 'core:year_2016_2017' %}">Read our Annual Report to learn about the impact we make »</a></p>
-                </div>
-
-               <div class="col-md-6">
-                    <h2>Bring Django Girls to your city!</h2>
-                    <p>Is there no Django Girls event in your city? You can help make it happen!</p>
-                    <p>We open sourced the <a href="http://organize.djangogirls.org/">Organizer Manual</a> that provides you with all information required to organize Django Girls workshop. By volunteering to organize, you're joining a vibrant and supportive community of {{ organizers_count|default_if_none:'0' }} organizers all over the world!</p>
-                    <p><a class="btn" href="{% url 'organize:index' %}">Apply to organize a workshop</a></p>
-                </div>
-            </div>
-        </section>
-
         <section id="events">
             <div class="row">
                 <div class="col-md-12">

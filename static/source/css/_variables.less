@@ -1,0 +1,34 @@
+@primary: #002837;
+@secondary: #70b1b6;
+@contrast: #e83f47;
+@light: #e8e8e4;
+
+@screen-xs-max: 767px;
+@screen-sm-min: 768px;
+@screen-sm-max: 991px;
+@screen-md-min: 992px;
+@screen-md-max: 1199px;
+@screen-lg-min: 1200x;
+
+// Breakpoints
+@highdensity: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+              ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+              ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+              ~"only screen and (min-device-pixel-ratio: 1.5)";
+
+//=============
+
+@xs-and-up: ~"only screen"; // xs is the smallest size, so "xs and up" is basically "everything on a screen"
+@xs-only: ~"only screen and (max-width: @{screen-xs-max})";
+@sm-and-up: ~"only screen and (min-width: @{screen-sm-min})";
+@sm-only: ~"only screen and (min-width: @{screen-sm-min}) and (max-width: @{screen-sm-max})";
+@md-and-up: ~"only screen and (min-width: @{screen-md-min})";
+@md-only: ~"only screen and (min-width: @{screen-md-min}) and (max-width: @{screen-md-max})";
+@lg-and-up: ~"only screen and (min-width: @{screen-lg-min})";
+@lg-only: @lg-and-up;
+
+// Media query names like how we talk in the project (although "true" responsive webdesign shouldn't use these terms)
+@print: ~"print";
+@mobile: @xs-only; // Don't use this if you're using other sizes too, because Mobile First should be the default.
+@tablet: @sm-only;
+@desktop: @md-and-up;
