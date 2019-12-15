@@ -32,62 +32,56 @@
                     <h2>Czym jest ng-boat?</h2>
                     <p>
                         Organizujemy warsztaty z programowania, na których zbudujecie swoją pierwszą aplikację internetową w Angularze. Kilka zdań o projekcie więcej.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                 </div>
             </div>
         </div>
     </section>
-    <div class="container">
-        <section id="events">
+    <section id="events">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <h2>
-                        Upcoming events
-                        <a class="ical btn btn-default btn-xs" href="{% url 'core:icalendar' %}">ICAL</a>
-                        <a class="ical btn btn-default btn-xs" href="{% url 'core:events_map' %}">MAP</a>
+                        Pierwsze wydarzenie wkrótce
                     </h2>
                 </div>
             </div>
 
             <div class="upcoming-events">
                 <div class="row-container">
-                    <div class="row">
-                    {% for event in future_events %}
-                        {% include 'includes/_event.html' with event=event %}
-                        {% if forloop.counter|divisibleby:3 %}</div><div class="row">{% endif %}
-                    {% endfor %}
+                    <p>
+                      Ciężko pracujemy nad pierwszą edycją warsztatów! Bądź na bieżąco:
+                    </p>
+                    <div class="row social-canals">
+                        <div class="col-xs-6">
+                          <a href="{% url 'core:newsletter' %}">
+                            <i class="glyphicon glyphicon-envelope"></i>
+                            <span>Newsletter</span>
+                          </a>
+                        </div>
+                        <div class="col-xs-6">
+                          <a href="{% url 'core:newsletter' %}">
+                            <img src="/static/img/facebook.png">
+                            <span>Facebook</span>
+                          </a>
+                        </div>
                     </div>
+                    {#<div class="row">#}
+                    {#{% for event in future_events %}#}
+                    {#    {% include 'includes/_event.html' with event=event %}#}
+                    {#    {% if forloop.counter|divisibleby:3 %}</div><div class="row">{% endif %}#}
+                    {#{% endfor %}#}
+                    {#</div>#}
                 </div>
-                <div class="show-more"><a href="javascript:;">Show all {{ future_events_count }} upcoming events »</a></div>
+                {#<div class="show-more"><a href="javascript:;">Show all {{ future_events_count }} upcoming events »</a></div>#}
             </div>
-        </section>
+        </div>
+    </section>
+    <div id="events-after"></div>
 
-        <section id="story">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>Badass Django Ladies</h2>
-                    <p>Each week we try to introduce one badass lady who uses Python or Django and highlight her work:</p>
-
-                    <div class="row">
-                    {% for story in stories %}
-                        {% include 'includes/_story.html' with story=story %}
-                    {% endfor %}
-                    </div>
-
-                    <p><a href="{% url 'story:stories' %}">Read all Django Stories »</a></p>
-                </div>
-                <div class="col-md-6">
-                    <h2>Latest from our blog</h2>
-                    {% for blog in blogposts %}
-                    <a href="{{ blog.post_url }}" target="_blank" class="post-title">{{ blog.name }}</a>
-                    <p class="post-content">{{ blog.content|striptags|truncatewords:25 }} <a href="{{ blog.post_url }}" target="_blank">Read all »</a></p>
-                    {% endfor %}
-                </div>
-            </div>
-        </section>
-
-        <section id="support">
+    <section id="support">
+        <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <h2>Support our work</h2>
@@ -104,58 +98,12 @@
                         If you would like to discuss a bigger partnership, <a href="{% url 'contact:contact' %}">please get in touch</a>.
                     </p>
                 </div>
-
-                 <div class="col-md-6">
-                    <h2>Stay up to date!</h2>
-                    <p>
-                        Subscribe to Django Girls Dispatch to receive the latest and greatest from our community every two weeks, straight to your inbox!
-                    </p>
-                     <div id="mc_embed_signup">
-                     <form action="//djangogirls.us8.list-manage.com/subscribe/post?u=5a007b2dabdeddc350bdbbaed&amp;id=d278270e6f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                         <div id="mc_embed_signup_scroll">
-                             <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-                             <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5a007b2dabdeddc350bdbbaed_d278270e6f" tabindex="-1" value=""></div>
-                             <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-                         </div>
-                     </form>
-                 </div>
-
-                    <p>
-                        <a href="{% url 'core:newsletter' %}">See the Django Girls Dispatch archives »</a>
-                    </p>
-                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>Buy a t-shirt!</h2>
-                </div>
-                <div class="col-md-6">
-                    <p>
-                        Help us spread the word about Django Girls while supporting us!
-                    </p>
-                    <p>We now have three awesome designs for fitted and straight-cut t-shirts: <a href="https://store.djangogirls.org/collections/frontpage/products/this-is-what-a-programmer-looks-like">"This is What a Programmer Looks Like"</a>, <a href="https://store.djangogirls.org/collections/frontpage/products/fitted-code-like-a-girl-t-shirt">"Code like a Girl"</a> and <a href="https://store.djangogirls.org/collections/frontpage/products/fitted-django-girls-t-shirt"> Django Girls logo</a>.</p>
-                    <p>
-                         All proceeds will go to two new projects:
-                        <ul>
-                    <li>Django Girls Summit: a two day unconference where organizers could meet and share their experiences about Django Girls workshops.</li>
-                    <li>Django Girls Organizer Starter Kit: a swag boxes for organizers full of stickers, buttons and tattoos!</li>
-                        </ul>
-                    </p>
-
-                    <p><a href="https://store.djangogirls.org/" class="btn">Get your t-shirt today!</a></p>
-
-                </div>
-                <div class="col-md-6">
-                    <a href="https://store.djangogirls.org/">
-                        <img src="{% static 'img/global/tshirt.png' %}" alt="Mint 'Code like a Girl' and cranberry 'This is what a programmer looks like' t-shirts."/>
-                    </a>
-                </div>
-            </div>
-            </section>
-
-        <section id="supporters">
+    <section id="supporters">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <h2>They already support us! 💕</h2>
@@ -165,8 +113,8 @@
 
             {% include 'includes/_main_sponsors.html' %}
 
-        </section>
+        </div>
+    </section>
 
-    </div>
 
 {% endblock %}
