@@ -26,12 +26,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
-                  miejsce na duże logo
+                  <img class="img-responsive" src="/static/img/ngboat-small.png" alt="ng-boat logo">
                 </div>
-                <div class="col-sm-9">
+                <div class="col-sm-9 col-md-8">
                     <h2>Czym jest ng-boat?</h2>
                     <p>
-                        Organizujemy warsztaty z programowania, na których zbudujecie swoją pierwszą aplikację internetową w Angularze. Kilka zdań o projekcie więcej.
+                        Organizujemy warsztaty z programowania, na których zbudujecie swoją pierwszą aplikację internetową w Angularze. Kilka zdań o projekcie więcej. Jakieś ikonki czy coś?
+                    </p>
+                    <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                 </div>
@@ -56,13 +58,13 @@
                     <div class="row social-canals">
                         <div class="col-xs-6">
                           <a href="{% url 'core:newsletter' %}">
-                            <i class="glyphicon glyphicon-envelope"></i>
+                            <img class="icon"  alt="" src="/static/img/newsletter.png">
                             <span>Newsletter</span>
                           </a>
                         </div>
                         <div class="col-xs-6">
-                          <a href="{% url 'core:newsletter' %}">
-                            <img src="/static/img/facebook.png">
+                          <a href="https://www.facebook.com/ngboatpl/">
+                            <img class="icon"  alt="" src="/static/img/facebook.png">
                             <span>Facebook</span>
                           </a>
                         </div>
@@ -83,26 +85,34 @@
     <section id="support">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <h2>Support our work</h2>
-                    <p>Django Girls is a volunteer run organization, and we depend on your support to make it happen.</p>
-                    <p class="support-stats">
-                        <span class="highlighted-number">$1,372</span> of <span class="highlighted-number">$1,500</span> monthly goal pledged
-                    </p>
-                    <div class="support-bar">
-                      <div class="pledge" style="width: 100%">91%</div>
+                <div class="col-md-12">
+                    <h2>Chcesz nam pomóc?</h2>
+                    <p>Ng-boat to projekt pomagający zacząć swoją przygodę z programowaniem.
+                      Działamy po godzinach i w czasie wolnym, aby dopiąć wszystko na ostatni guzik.</p>
+
+                    <div class="row">
+                        <div class="col-sm-4 col-lg-3">
+                            <img class="img-responsive support-img"  alt="" src="/static/img/index/money.png">
+                            <h3>Chciałbyś zostać sponsorem wydarzenia?</h3>
+                            <p>Super! <a href="{% url 'core:contribute' %}">Tutaj znajdziesz naszą aktualną ofertę dla sponsorów TODO</a></p>
+                        </div>
+                        <div class="col-sm-4 col-lg-3 col-lg-offset-1">
+                            <img class="img-responsive support-img"  alt="" src="/static/img/index/clock.png">
+                            <h3>Masz trochę wolnego czasu?</h3>
+                            <p>Chciałbyś pomóc nam w organizacji wydarzenia, pracować nad tutorialem lub zostać instruktorem? <a href="{% url 'core:contribute' %}">Zobacz jak możesz to zrobić</a></p>
+                        </div>
+                        <div class="col-sm-4 col-lg-3 col-lg-offset-1">
+                            <img class="img-responsive support-img"  alt="" src="/static/img/index/idea.png">
+                            <h3>Masz jakiś inny pomysł?</h3>
+                            <p><a href="{% url 'contact:contact' %}">Daj nam znać!</a></p>
+                        </div>
                     </div>
-                    <a class="btn" href="http://patreon.com/djangogirls">Make a recurring donation on Patreon</a>
-                    <p class="partnership">
-                        You can also send us a one <a href="{% url 'core:donate' %}">time donation</a>.
-                        If you would like to discuss a bigger partnership, <a href="{% url 'contact:contact' %}">please get in touch</a>.
-                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="supporters">
+    {% comment %}<section id="supporters">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -114,7 +124,7 @@
             {% include 'includes/_main_sponsors.html' %}
 
         </div>
-    </section>
+    </section>{% endcomment %}
 
 
 {% endblock %}
