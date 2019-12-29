@@ -82,35 +82,7 @@
     </section>
     <div id="events-after"></div>
 
-    <section id="support">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>Chcesz nam pomóc?</h2>
-                    <p>Ng-boat to projekt pomagający zacząć swoją przygodę z programowaniem.
-                      Działamy po godzinach i w czasie wolnym, aby dopiąć wszystko na ostatni guzik.</p>
-
-                    <div class="row">
-                        <div class="col-sm-4 col-lg-3">
-                            <img class="img-responsive support-img"  alt="" src="/static/img/index/money.png">
-                            <h3>Chciałbyś zostać sponsorem wydarzenia?</h3>
-                            <p>Super! <a href="{% url 'core:contribute' %}">Tutaj znajdziesz naszą aktualną ofertę dla sponsorów TODO</a></p>
-                        </div>
-                        <div class="col-sm-4 col-lg-3 col-lg-offset-1">
-                            <img class="img-responsive support-img"  alt="" src="/static/img/index/clock.png">
-                            <h3>Masz trochę wolnego czasu?</h3>
-                            <p>Chciałbyś pomóc nam w organizacji wydarzenia, pracować nad tutorialem lub zostać instruktorem? <a href="{% url 'core:contribute' %}">Zobacz jak możesz to zrobić</a></p>
-                        </div>
-                        <div class="col-sm-4 col-lg-3 col-lg-offset-1">
-                            <img class="img-responsive support-img"  alt="" src="/static/img/index/idea.png">
-                            <h3>Masz jakiś inny pomysł?</h3>
-                            <p><a href="{% url 'contact:contact' %}">Daj nam znać!</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {% include 'includes/_contribute.html' %}
 
     <section id="about-us">
         <div class="container">

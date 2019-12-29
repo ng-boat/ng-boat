@@ -2,7 +2,17 @@
 {% load static %}
 
 {% block content %}
+    <div class="container">
+      <h1 class="header-line">Najbliższe wydarzenie już w marcu</h1>
+      <p>Robimy wszystko, aby pierwsze wydarzenie odbyło się już w marcu!</p>
 
+    </div>
+
+
+    {% include 'includes/_contribute.html' %}
+
+
+{% comment %}
     <div class="container">
 
         <section id="events">
@@ -43,5 +53,5 @@
         </section>
 
     </div>
-
+{% endcomment %}
 {% endblock %}

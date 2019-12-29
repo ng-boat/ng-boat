@@ -6,6 +6,14 @@ body {
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-family: 'Ubuntu', sans-serif;
 }
+.header-line::after {
+  content: '';
+  display: block;
+  background: url('/static/img/line.png');
+  height: 4px;
+  width: 300px;
+  margin-top: 10px;
+}
 
 a {
   color: @contrast;
