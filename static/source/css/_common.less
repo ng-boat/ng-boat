@@ -1,6 +1,12 @@
 @import "_variables";
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   font-family: 'Lato', sans-serif;
+  margin-bottom: 170px; // height of footer
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
@@ -65,6 +71,9 @@ footer {
   color: @light;
   padding-top: 50px;
   padding-bottom: 50px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 
   ul {
     padding: 0;
