@@ -6,7 +6,9 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
-  margin-bottom: 170px; // height of footer
+  @media @sm-and-up {
+    margin-bottom: 170px; // height of footer
+  }
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
@@ -71,9 +73,12 @@ footer {
   color: @light;
   padding-top: 50px;
   padding-bottom: 50px;
-  position: absolute;
   bottom: 0;
   width: 100%;
+
+  @media @sm-and-up {
+    position: absolute;
+  }
 
   ul {
     padding: 0;
@@ -84,6 +89,13 @@ footer {
     list-style: none;
     display: inline-block;
     padding: 10px 20px 10px 0;
+  }
+  .footer-logo {
+    img {
+      max-width: 150px;
+      margin: 0 auto;
+      width: 100%;
+    }
   }
 }
 form {

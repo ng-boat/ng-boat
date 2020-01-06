@@ -1,13 +1,21 @@
+{% load static %}
 <footer>
     <div class="container">
-        <p>ng-boat</p>
-        <ul>
-            <li><a href="{% url 'contact:contact' %}">Kontakt</a></li>
-            <li><a href="{% url 'core:contribute' %}">Współpraca</a></li>
-            <li><a href="http://facebook.com/ngboatpl">Facebook</a></li>
-            <li><a href="http://instagram.com/ngboat">Instagram</a></li>
-            <li><a href="{% url 'core:resources' %}">Materiały</a></li>
-            <li><a href="{% url 'core:privacy-cookies' %}">Prywatność i ciasteczka</a></li>
-        </ul>
+      <div class="row">
+        <div class="col-sm-2 col-md-1 footer-logo">
+          <img class="img-responsive" src="{% static 'img/ngboat-small.png' %}" alt="ng-boat" />
+        </div>
+        <div class="col-sm-10 col-md-11">
+          <p>ng-boat</p>
+          <ul>
+              <li><a href="{% url 'contact:contact' %}">Kontakt</a></li>
+              <li><a href="{% url 'core:contribute' %}">Współpraca</a></li>
+              <li><a href="http://facebook.com/ngboatpl">Facebook</a></li>
+              <li><a href="http://instagram.com/ngboat">Instagram</a></li>
+              <li><a href="{% url 'core:resources' %}">Materiały</a></li>
+              <li><a href="{% url 'core:privacy-cookies' %}">Prywatność i ciasteczka</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
 </footer>
