@@ -212,7 +212,7 @@ MAILCHIMP_API_KEY = os.environ.get('MAILCHIMP_APIKEY')
 MANDRILL_API_KEY = os.environ.get('MANDRILL_APIKEY')
 EMAIL_BACKEND = os.environ.get("EMAIL_BACKEND",
                                "django.core.mail.backends.console.EmailBackend")
-DEFAULT_FROM_EMAIL = "hello@djangogirls.org"
+DEFAULT_FROM_EMAIL = "kontakt@ng-boat.pl"
 
 SLACK_API_KEY = os.environ.get('SLACK_API_KEY')
 

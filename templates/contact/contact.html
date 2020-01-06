@@ -2,32 +2,32 @@
 {% block title %}Django Girls Contact{% endblock %}
 
 {% block content %}
-  <div class="container without-background public-form" id="flatpage">
+  <div class="container public-form" id="flatpage">
     <div id="value" class="row">
       <div class="col-md-12">
         <h1 class="header-line">Kontakt</h1>
 
-        {% include 'includes/_info_messages.html' %}
+        <p>Cześć! Co u ciebie słychać? Napisz na <a href="mailto:kontakt@ng-boat.pl">kontakt@ng-boat.pl</a> albo skorzystaj z formularza poniżej.</p>
 
-        <p>Cześć! Co u ciebie słychać?</p>
-
-        <form action="" method="post">
-          {% csrf_token %}
-
-          <div class="row">
-            <div class="col-md-12">
-              {% include 'includes/_field.html' with field=form.name %}
-            </div>
-            <div class="col-md-12">
-              {% include 'includes/_field.html' with field=form.email %}
-            </div>
-            <div class="col-md-12">
-              {% include 'includes/_field.html' with field=form.message %} {% include 'includes/_field.html' with field=form.captcha %}
-            </div>
+        <div class="row">
+          <div class="col-sm-6 hidden-xs">
+            <img class="img-responsive"  alt="" src="/static/img/photos/contact.jpg">
           </div>
+          <div class="col-sm-6 col-md-4">
+            {% include 'includes/_info_messages.html' %}
 
-          <input type="submit" value="Send"/>
-        </form>
+            <form action="" method="post" class="contact-form">
+              {% csrf_token %}
+
+                  {% include 'includes/_field.html' with field=form.name %}
+                  {% include 'includes/_field.html' with field=form.email %}
+                  {% include 'includes/_field.html' with field=form.message %}
+
+                  {% include 'includes/_field.html' with field=form.captcha %}
+
+              <input type="submit" value="Send"/>
+            </form>
+        </div>
       </div>
     </div>
   </div>

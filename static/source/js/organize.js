@@ -1,6 +1,6 @@
 window.captchaConf = {
  callback: function() { },
- sitekey: '6LfGqhEUAAAAAL5PxSosc3VCjvDkCakk9y7xorc7'
+ sitekey: '6LcfzMwUAAAAAHI-hBmsnsz_xOv3v4yH4aJiJ8vk'
 };
 
 window.onCaptchaLoadCallback = function() {

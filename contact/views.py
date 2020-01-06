@@ -14,10 +14,10 @@ class ContactView(FormView):
         contact_email = form.save()
         if contact_email.sent_successfully:
             messages.info(
-                self.request, "Thank you for your email. We will be in touch shortly."
+                self.request, "Dzięki! Odezwiemy się wkrótce"
             )
         else:
             messages.error(
-                self.request, "Ooops. We couldn't send your email :( Please try again later"
+                self.request, "Ałć. Coś nie poszło, spróbuj ponownie później"
             )
         return super(ContactView, self).form_valid(form)

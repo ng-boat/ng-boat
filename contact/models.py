@@ -38,7 +38,7 @@ class ContactEmail(models.Model):
         email = EmailMessage(
             self._get_subject(),
             self.message,
-            "Django Girls Contact <hello@djangogirls.org>",
+            "ng-boat <kontakt@ng-boat.pl>",
             [self.sent_to],
             reply_to=["{} <{}>".format(self.name, self.email)],
             headers={'Reply-To': "{} <{}>".format(self.name, self.email)}
@@ -54,7 +54,7 @@ class ContactEmail(models.Model):
     def _get_to_email(self):
         if self.event and self.event.email:
             return self.event.email
-        return 'hello@djangogirls.org'
+        return 'kontakt@ng-boat.pl'
 
     def _get_subject(self):
-        return "%s - from the djangogirls.org website" % self.name
+        return "%s - od ng-boat.pl" % self.name
