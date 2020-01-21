@@ -14,7 +14,7 @@ def generate_html_content(event_list):
     for event in event_list:
         city = event.city
         url = event.page_url
-        html = "<a href='https://djangogirls.org/%s'>%s</a>" % (url, city)
+        html = "<a href='https://ng-boat.pl/%s'>%s</a>" % (url, city)
         result.append(html)
     return result
 
@@ -64,7 +64,7 @@ def command():
     else:
         click.echo(
             "There's no new event to announce. Don't forget to check our "
-            "<a href='https://djangogirls.org/events/'>website</a> to get a "
+            "<a href='https://ng-boat.pl/events/'>website</a> to get a "
             "list of our events planned for the next few months.")
 
     # Get the events with open registration.

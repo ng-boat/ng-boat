@@ -83,7 +83,7 @@ class ApplicationForm(forms.Form):
         if not self.form.event.email:
             # If event doesn't have an email (legacy events), create
             # it just by taking the url. In 99% cases, it is correct.
-            self.form.event.email = "{}@djangogirls.org".format(
+            self.form.event.email = "{}@ng-boat.pl".format(
                 self.form.event.page_url)
             self.form.event.save()
 

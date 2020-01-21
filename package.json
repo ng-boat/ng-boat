@@ -1,15 +1,15 @@
 {
-  "name": "djangogirls",
+  "name": "ngboat",
   "version": "1.0.0",
-  "description": "This repository contains sources of Django application that powers [DjangoGirls.org](http://djangogirls.org/).",
+  "description": "This repository contains sources of Django application that powers [ng-boat.pl](http://ng-boat.pl/).",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DjangoGirls/djangogirls.git"
+    "url": "git+https://github.com/ng-boat/ng-boat.git"
   },
   "bugs": {
-    "url": "https://github.com/DjangoGirls/djangogirls/issues"
+    "url": "https://github.com/ng-boat/ng-boat/issues"
   },
-  "homepage": "https://github.com/DjangoGirls/djangogirls#readme",
+  "homepage": "https://github.com/ng-boat/ng-boat#readme",
   "dependencies": {
     "gulp-less": "^4.0.1"
   },

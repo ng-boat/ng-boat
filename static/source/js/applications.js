@@ -64,8 +64,8 @@ $(document).ready(function() {
 
     function updatePreview(value) {
         var message = value;
-        message = message.replace(/\[rsvp-url-yes\]/g, '<a href="">http://djangogirls.org/rsvp-YES-generated-url</a>');
-        message = message.replace(/\[rsvp-url-no\]/g, '<a href="">http://djangogirls.org/rsvp-NO-generated-url</a>');
+        message = message.replace(/\[rsvp-url-yes\]/g, '<a href="">http://ng-boat.pl/rsvp-YES-generated-url</a>');
+        message = message.replace(/\[rsvp-url-no\]/g, '<a href="">http://ng-boat.pl/rsvp-NO-generated-url</a>');
         $('#preview').html(message);
     }
 

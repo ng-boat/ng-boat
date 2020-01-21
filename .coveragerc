@@ -5,5 +5,5 @@ omit =
     **/migrations/*
 	**/tests/*
     .venv
-    djangogirls/wsgi.py
+    ngboat/wsgi.py
     manage.py

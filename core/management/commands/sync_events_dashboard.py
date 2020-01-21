@@ -45,7 +45,7 @@ def event_list():
 
 # Sync to trello
 
-ADMIN_BASE_URL = 'https://djangogirls.org/admin/core/event/'
+ADMIN_BASE_URL = 'https://ng-boat.pl/admin/core/event/'
 
 
 def sync(events, token):

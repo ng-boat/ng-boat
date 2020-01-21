@@ -13,5 +13,5 @@ coverage:
   ignore:
     - tests/*
     - migrations/*
-    - djangogirls/wsgi.py
+    - ngboat/wsgi.py
     - core/gmail_accounts.py

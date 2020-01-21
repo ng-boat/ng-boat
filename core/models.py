@@ -144,7 +144,7 @@ class Event(models.Model):
     page_custom_css = models.TextField("custom CSS rules", blank=True)
     page_url = models.CharField(
         "URL slug", max_length=200, blank=True,
-        help_text="Will be used as part of the event URL (djangogirls.org/______/)")
+        help_text="Will be used as part of the event URL (ng-boat.pl/______/)")
     is_page_live = models.BooleanField("Website is ready", default=False)
 
     attendees_count = models.IntegerField(
@@ -174,7 +174,7 @@ class Event(models.Model):
 
     @property
     def ical_uid(self):
-        return "event%d@djangogirls.org" % self.pk
+        return "event%d@ng-boat.pl" % self.pk
 
     @property
     def date_is_approximate(self):
@@ -316,7 +316,7 @@ class EventPageMenu(models.Model):
     title = models.CharField(max_length=255)
     url = models.CharField(
         max_length=255,
-        help_text="http://djangogirls.org/city/<the value you enter here>")
+        help_text="http://ng-boat.pl/city/<the value you enter here>")
     position = models.PositiveIntegerField(
         help_text="Order of menu")
 

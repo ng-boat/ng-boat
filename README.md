@@ -1,9 +1,7 @@
 # Django Girls website
 
-[![Build Status](https://travis-ci.org/DjangoGirls/djangogirls.svg?branch=master)](https://travis-ci.org/DjangoGirls/djangogirls) [![codecov](https://codecov.io/gh/DjangoGirls/djangogirls/branch/master/graph/badge.svg)](https://codecov.io/gh/DjangoGirls/djangogirls)
 
-
-This repository contains sources of Django application that powers [DjangoGirls.org](http://djangogirls.org/).
+This repository contains sources of Django application that powers [ng-boat.pl](http://ng-boat.pl/).
 
 ## What's in it?
 
@@ -25,18 +23,18 @@ And then follow the instructions.
 
 ### Event
 
-http://djangogirls.org/admin/core/event/
+http:/ng-boat.pl/admin/core/event/
 
 Here you can change:
 - Meta tags - title and description of the website
 - Main color - main color on the website in HEX (default is FF9400)
 - Custom CSS - customize CSS on the website
-- URL - url that goes after the domain (http://djangogirls.org/__url__)
-- Is live? - live website is available [on the homepage](http://djangogirls.org/) and can be accessed by anyone
+- URL - url that goes after the domain (http://ng-boat.pl/__url__)
+- Is live? - live website is available [on the homepage](http://ng-boat.pl/) and can be accessed by anyone
 
 ### EventPageContent
 
-http://djangogirls.org/admin/core/eventpagecontent/
+http://ng-boat.pl/admin/core/eventpagecontent/
 
 Each website comes with some default content that you can adjust to your needs. Each object is a "block" on the website that you can modify in following ways:
 - Name - it's also a permalink that you can link to like this: __#name__
@@ -46,7 +44,7 @@ Each website comes with some default content that you can adjust to your needs. 
 
 ### EventPageMenu
 
-http://djangogirls.org/admin/core/eventpagemenu/add/
+http://ng-boat.pl/admin/core/eventpagemenu/add/
 
 To manage menu available on the website, you can add objects to EventPageMenu. Available options:
 - Title
@@ -55,7 +53,7 @@ To manage menu available on the website, you can add objects to EventPageMenu. A
 
 # Contributing to Django Girls website
 
-The website is hosted on PythonAnywhere and is available here: http://djangogirls.org/
+The website is hosted on PythonAnywhere and is available here: http://ng-boat.pl/
 
 Please note that we use Python 3 only, so make sure that you use correct version when running commands below.
 
@@ -63,11 +61,11 @@ Please note that we use Python 3 only, so make sure that you use correct version
 
 First, clone the repository:
 
-    git clone git@github.com:DjangoGirls/djangogirls.git
+    git clone git@github.com:ng-boat/ng-boat.git
 
-Step into newly created `djangogirls` directory:
+Step into newly created `ngboat` directory:
 
-    cd djangogirls
+    cd ngboat
 
 Create a new virtual environment if needed. Then, install all the required dependencies:
 
@@ -79,9 +77,9 @@ Start the [PostgreSQL database server](http://www.postgresql.org/docs/current/st
 
 In the `psql` shell, create a database and a role with the necessary permissions:
 
-    CREATE DATABASE djangogirls;
+    CREATE DATABASE ngboat;
     CREATE ROLE postgres;
-    GRANT ALL privileges ON DATABASE djangogirls TO postgres;
+    GRANT ALL privileges ON DATABASE ngboat TO postgres;
     ALTER ROLE postgres WITH LOGIN;
 
 Exit the `psql` shell:
@@ -155,12 +153,12 @@ For local development:
 Key bits of config and secrets are stored in environment variables in two places:
 
 * in the WSGI file (linked from the Web Tab)
-* in the virtualenv postactivate at ~/.virtualenvs/djangogirls.com/bin/postactivate
+* in the virtualenv postactivate at ~/.virtualenvs/ng-boat.pl/bin/postactivate
 
 
 ### Google Apps API integration
 
-We're using Google Apps Admin SDK for creating email accounts in djangogirls.org domain automatically.
+We're using Google Apps Admin SDK for creating email accounts in ng-boat.pl domain automatically.
 
 Several things were needed to get this working:
 

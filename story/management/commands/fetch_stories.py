@@ -20,7 +20,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
 
-        rss_url = 'http://blog.djangogirls.org/rss'
+        rss_url = 'http://blog.ng-boat.pl/rss'
 
         response = requests.get(rss_url)
         rss = ElementTree.fromstring(response.content)

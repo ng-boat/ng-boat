@@ -83,7 +83,7 @@ class EventApplication(models.Model):
         """ Creates event based on the data from the EventApplication.
         """
         name = 'Django Girls {}'.format(self.city)
-        email = '{}@djangogirls.org'.format(self.website_slug)
+        email = '{}@ng-boat.pl'.format(self.website_slug)
 
         event = Event.objects.create(
             date=self.date,

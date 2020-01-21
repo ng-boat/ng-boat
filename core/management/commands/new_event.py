@@ -35,9 +35,9 @@ def get_basic_info():
     date = gather_event_date_from_prompt()
 
     url = click.prompt(click.style(
-        "What should be the URL of website? djangogirls.org/______", bold=True, fg='yellow'))
+        "What should be the URL of website? ng-boat.pl/______", bold=True, fg='yellow'))
     event_mail = click.prompt(click.style(
-        "What is the email prefix of the event? ______@djangogirls.org", bold=True, fg='yellow'),
+        "What is the email prefix of the event? ______@ng-boat.pl", bold=True, fg='yellow'),
         default=url)
     click.echo("Ok, got that! Your new event will happen in {0}, {1} on {2}".format(
         city, country, date))
@@ -63,7 +63,7 @@ def command(short):
     # Event and EventPage objects
     name = 'Django Girls ' + city
     latlng = get_coordinates_for_city(city, country)
-    email = event_email + '@djangogirls.org'
+    email = event_email + '@ng-boat.pl'
     form = EventForm({
         'city': city,
         'country': country,
@@ -94,7 +94,7 @@ def command(short):
     event.save()
 
     click.secho(
-        "Website is ready here: http://djangogirls.org/{0}".format(url),
+        "Website is ready here: http://ng-boat.pl/{0}".format(url),
         fg='green')
     click.echo(DELIMITER)
 
@@ -106,7 +106,7 @@ def command(short):
         "This is a ready, filled out mail to sent to organizers:", fg='green')
 
     click.echo("SUBJECT: Django Girls {} setup".format(event.city))
-    click.echo("TO: {}, {}, hello@djangogirls.org".format(
+    click.echo("TO: {}, {}, kontakt@ng-boat.pl".format(
         ', '.join([x.email for x in members]),
         event.email
     ))

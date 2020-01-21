@@ -315,7 +315,7 @@ class Email(models.Model):
         self.number_of_recipients = recipients.count()
         self.sent_from = (
             self.form.event.email or
-            '{}@djangogirls.org'.format(self.form.event.page_url))
+            '{}@ng-boat.pl'.format(self.form.event.page_url))
         successfuly_sent = []
         failed_to_sent = []
 

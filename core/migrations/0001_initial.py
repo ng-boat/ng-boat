@@ -61,7 +61,7 @@ class Migration(migrations.Migration):
                 ('page_description', models.TextField(blank=True, default='Django Girls is a one-day workshop about programming in Python and Django tailored for women.', verbose_name='description')),
                 ('page_main_color', models.CharField(blank=True, default='FF9400', help_text='Main color of the chapter in HEX', max_length=6, verbose_name='main color')),
                 ('page_custom_css', models.TextField(blank=True, verbose_name='custom CSS rules')),
-                ('page_url', models.CharField(blank=True, help_text='Will be used as part of the event URL (djangogirls.org/______/)', max_length=200, verbose_name='URL slug')),
+                ('page_url', models.CharField(blank=True, help_text='Will be used as part of the event URL (ng-boat.pl/______/)', max_length=200, verbose_name='URL slug')),
                 ('is_page_live', models.BooleanField(default=False, verbose_name='Website is ready')),
                 ('attendees_count', models.IntegerField(blank=True, null=True, verbose_name='Number of attendees')),
                 ('applicants_count', models.IntegerField(blank=True, null=True, verbose_name='Number of applicants')),
@@ -99,7 +99,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=255)),
-                ('url', models.CharField(help_text='http://djangogirls.org/city/<the value you enter here>', max_length=255)),
+                ('url', models.CharField(help_text='http://ng-boat.pl/city/<the value you enter here>', max_length=255)),
                 ('position', models.PositiveIntegerField(help_text='Order of menu')),
                 ('event', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='menu', to='core.Event')),
             ],

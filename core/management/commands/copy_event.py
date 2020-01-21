@@ -78,7 +78,7 @@ def command():
         members = create_users(team, new_event)
         new_event.main_organizer = members[0]
         # Edit previous email account
-        event.email = "{}{:02d}{}@djangogirls.org".format(event.email.split('@')[0], event.date.month, event.date.year)
+        event.email = "{}{:02d}{}@ng-boat.pl".format(event.email.split('@')[0], event.date.month, event.date.year)
     else:
         new_event.team.set(organizers)
 
@@ -107,6 +107,6 @@ def command():
     # Brag on Slack
     brag_on_slack_bang(new_event.city, new_event.country, new_event.team.all())
 
-    click.echo(click.style("Website is ready here: https://djangogirls.org/{0}".format(new_event.page_url),
+    click.echo(click.style("Website is ready here: https://ng-boat.pl/{0}".format(new_event.page_url),
     bold=True, fg="green"))
     click.echo("Congrats on yet another event!")

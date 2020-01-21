@@ -49,7 +49,7 @@ class EventAdmin(admin.ModelAdmin):
 
     def full_url(self, obj):
         url = reverse('core:event', kwargs={'city': obj.page_url})
-        url = 'https://djangogirls.org{url}'.format(url=url)
+        url = 'https://ng-boat.pl{url}'.format(url=url)
         return mark_safe('<a href="{url}">{url}</a>'.format(url=url))
     full_url.short_description = 'page URL'
 
