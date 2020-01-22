@@ -23,5 +23,4 @@ static/build/
 static/local/
 static/rev-manifest.json
 temp/
-ngboat/settings.py
 package-lock.json
